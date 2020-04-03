@@ -9,13 +9,13 @@ public class App {
         
         miPooflix.inicializarCatalogo();
 
-        Serie bb = miPooflix.buscarSerie("Breaking Bad");
+        Serie bb = miPooflix.buscarSerie("Penny Dreadful");
         
-        Temporada laMejorTemporada = bb.getTemporada(5);
+        Temporada laMejorTemporada = bb.getTemporada(1);
         
         Episodio elTop;
         
-        elTop = laMejorTemporada.getEpisodio(7);
+        elTop = laMejorTemporada.getEpisodio(6);
         
         elTop.reproducir();
 
