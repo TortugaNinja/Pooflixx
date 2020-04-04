@@ -10,7 +10,13 @@ public class Pooflix {
 
     public void inicializarCatalogo() {
 
+        this.agregarBreakingBad();
+        this.agregarPennyDreadful();
+        this.agregarWalkingDead(); 
 
+    }
+
+    public void agregarBreakingBad() {
 
         Serie breakingB = new Serie();
         breakingB.titulo = "Breaking Bad";
@@ -23,7 +29,7 @@ public class Pooflix {
         t5.numero = 5;
 
         Episodio ep = new Episodio();
-  
+
         ep.numero = 7;
         ep.nombre = "Say my name";
         ep.duracion = 43d;
@@ -35,12 +41,16 @@ public class Pooflix {
         epOtro.numero = 5;
         epOtro.nombre = "Ozymandias";
         epOtro.duracion = 41d;
-
+                 
         t5.episodios.add(epOtro);
 
         breakingB.temporadas.add(t5);
 
         this.series.add(breakingB);
+
+    }
+
+    public void agregarPennyDreadful() {
 
         Serie pennyDreadful = new Serie();
         pennyDreadful.titulo = "Penny Dreadful";
@@ -50,7 +60,6 @@ public class Pooflix {
         Genero horror = new Genero();
         horror.nombre = "Horror";
         pennyDreadful.generos.add(fantasia);
-        pennyDreadful.generos.add(drama);
         pennyDreadful.generos.add(horror);
 
         Temporada t1 = new Temporada();
@@ -77,72 +86,93 @@ public class Pooflix {
         t3.episodios.add(ep8);
 
         this.series.add(pennyDreadful);
+    }
 
-    
+    public void agregarWalkingDead() {
 
-   
+        Serie theWalkingDead = new Serie();
 
-		Serie theWD = new Serie();
-		theWD.titulo = "The Walking Dead";
+        theWalkingDead.titulo = "The Walking Dead";
 
-		Genero generoTWD = new Genero();
-		generoTWD.nombre = "horror";
-		theWD.generos.add(generoTWD);
+        Genero genero = new Genero();
 
-        theWD.temporadas.add(t1);
+        genero.nombre = "post-apocaliptica";
 
-        
-        Websodio web1 = new Websodio();
-        web1.numero = 1;
-        web1.nombre = "A New Day";
-        web1.duracion = 120d;
-        web1.url = "https//: asd.com";
-        t1.episodios.add(web1);
+        theWalkingDead.generos.add(genero);
 
-		Episodio ep1 = new Episodio();
-		ep1.numero = 1;
-		ep1.nombre = "Days Gone Bye";
-		ep1.duracion = 41d;
-		t1.episodios.add(ep1);
+        Temporada t4 = new Temporada();
+        t4.numero = 4;
 
-		Episodio ep3 = new Episodio();
-		ep3.numero = 3;
-		ep3.nombre = "Tell It To The Frogs";
-		ep3.duracion = 40d;
-		t1.episodios.add(ep3);
+        // AGrego un websodio
+        Websodio websodio = new Websodio();
 
-		theWD.temporadas.add(t1);
+        websodio.numero = 1;
+        websodio.nombre = "A New Day";
+        websodio.duracion = 20d;
 
-		Episodio ep4 = new Episodio();
-		ep4.numero = 3;
-		ep4.nombre = "Walk With Me";
-		ep4.duracion = 47d;
-		t3.episodios.add(ep4);
+        websodio.url = "http.//jajaj.com";
+        t4.episodios.add(websodio);
 
-		Episodio ep5 = new Episodio();
-		ep5.numero = 5;
-		ep5.nombre = "Say the Word";
-		ep5.duracion = 50d;
-		t3.episodios.add(ep5);
+        websodio = new Websodio();
 
-		theWD.temporadas.add(t3);
+        websodio.numero = 2;
+        websodio.nombre = "Alone";
+        websodio.duracion = 20d;
+        websodio.url = "http.//jajaja.com";
 
-		this.series.add(theWD);
+        t4.episodios.add(websodio);
 
-	}
+        Episodio epii = new Episodio();
 
+        epii.numero = 8;
+        epii.nombre = "Too Far Gone";
+        epii.duracion = 43d;
+
+        t4.episodios.add(epii);
+
+        Episodio epiii = new Episodio();
+
+        epiii.numero = 9;
+        epiii.nombre = "After";
+        epiii.duracion = 43d;
+
+        t4.episodios.add(epiii);
+
+        theWalkingDead.temporadas.add(t4);
+
+        Temporada t7 = new Temporada();
+
+        t7.numero = 7;
+
+        Episodio epp = new Episodio();
+
+        epp.numero = 1;
+        epp.nombre = "The Day Will Come When You Won't Be";
+        epp.duracion = 45d;
+
+        t7.episodios.add(epp);
+        Episodio eppp = new Episodio();
+
+        eppp.numero = 3;
+        eppp.nombre = "The Cell";
+        eppp.duracion = 43d;
+
+        t7.episodios.add(eppp);
+        theWalkingDead.temporadas.add(t7);
+
+        this.series.add(theWalkingDead);
+    }
 
     public Contenido buscarPorTitulo(String titulo) {
         return null;
     }
 
     public Serie buscarSerie(String titulo) {
-        
+
         for (Serie s : this.series) {
-            if (s.titulo.equals(titulo)) 
+            if (s.titulo.equals(titulo))
                 return s;
-            
-            
+
         }
         return null;
     }
@@ -154,4 +184,5 @@ public class Pooflix {
     public Serie buscarSerie(Actor actor) {
         return null;
     }
+
 }
