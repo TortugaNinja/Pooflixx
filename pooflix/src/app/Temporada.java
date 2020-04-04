@@ -7,6 +7,7 @@ public class Temporada {
 
     public int numero;
     public List<Episodio> episodios = new ArrayList<>();
+  
 
     public Episodio getEpisodio(int numeroEpisodio) {
 
@@ -18,8 +19,5 @@ public class Temporada {
 
         return null;
     }
-
-
-
     
 }

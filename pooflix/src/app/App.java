@@ -9,14 +9,22 @@ public class App {
         
         miPooflix.inicializarCatalogo();
 
-        Serie bb = miPooflix.buscarSerie("Penny Dreadful");
+        Serie bb = miPooflix.buscarSerie("The Walking Dead");
         
         Temporada laMejorTemporada = bb.getTemporada(1);
         
+        Episodio websodio;
+
+        websodio = laMejorTemporada.getEpisodio(1);
+        
+        websodio.reproducir();
+
+        Temporada laOtraMejorTemporada = bb.getTemporada(1);
+       
         Episodio elTop;
-        
-        elTop = laMejorTemporada.getEpisodio(6);
-        
+
+        elTop = laOtraMejorTemporada.getEpisodio(1);
+
         elTop.reproducir();
 
 

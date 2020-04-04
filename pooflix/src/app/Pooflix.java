@@ -78,9 +78,9 @@ public class Pooflix {
 
         this.series.add(pennyDreadful);
 
-    }
+    
 
-    public void agregarTheWalkingDead() {
+   
 
 		Serie theWD = new Serie();
 		theWD.titulo = "The Walking Dead";
@@ -89,39 +89,43 @@ public class Pooflix {
 		generoTWD.nombre = "horror";
 		theWD.generos.add(generoTWD);
 
-		Temporada temp1 = new Temporada();
-		temp1.numero = 1;
-		
-		Episodio cap1 = new Episodio();
-		cap1.numero = 1;
-		cap1.nombre = "Days Gone Bye";
-		cap1.duracion = 41d;
-		temp1.episodios.add(cap1);
+        theWD.temporadas.add(t1);
 
-		Episodio cap3 = new Episodio();
-		cap3.numero = 3;
-		cap3.nombre = "Tell It To The Frogs";
-		cap3.duracion = 40d;
-		temp1.episodios.add(cap3);
+        
+        Websodio web1 = new Websodio();
+        web1.numero = 1;
+        web1.nombre = "A New Day";
+        web1.duracion = 120d;
+        web1.url = "https//: asd.com";
+        t1.episodios.add(web1);
 
-		theWD.temporadas.add(temp1);
+		Episodio ep1 = new Episodio();
+		ep1.numero = 1;
+		ep1.nombre = "Days Gone Bye";
+		ep1.duracion = 41d;
+		t1.episodios.add(ep1);
 
-		Temporada temp3 = new Temporada();
-		temp3.numero = 3;
+		Episodio ep3 = new Episodio();
+		ep3.numero = 3;
+		ep3.nombre = "Tell It To The Frogs";
+		ep3.duracion = 40d;
+		t1.episodios.add(ep3);
 
-		Episodio cap4 = new Episodio();
-		cap4.numero = 3;
-		cap4.nombre = "Walk With Me";
-		cap4.duracion = 47d;
-		temp3.episodios.add(cap4);
+		theWD.temporadas.add(t1);
 
-		Episodio cap5 = new Episodio();
-		cap5.numero = 5;
-		cap5.nombre = "Say the Word";
-		cap5.duracion = 50d;
-		temp3.episodios.add(cap5);
+		Episodio ep4 = new Episodio();
+		ep4.numero = 3;
+		ep4.nombre = "Walk With Me";
+		ep4.duracion = 47d;
+		t3.episodios.add(ep4);
 
-		theWD.temporadas.add(temp3);
+		Episodio ep5 = new Episodio();
+		ep5.numero = 5;
+		ep5.nombre = "Say the Word";
+		ep5.duracion = 50d;
+		t3.episodios.add(ep5);
+
+		theWD.temporadas.add(t3);
 
 		this.series.add(theWD);
 
