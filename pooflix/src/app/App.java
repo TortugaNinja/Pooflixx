@@ -4,17 +4,18 @@ import java.util.Scanner;
 
 public class App {
     public static Scanner Teclado = new Scanner(System.in);
+
     public static void main(String[] args) throws Exception {
-        
+
         Pooflix miPooflix = new Pooflix();
 
         System.out.println("Iniciando Catalogo");
-        
+
         miPooflix.inicializarCatalogo();
 
         Serie bb = miPooflix.buscarSerie("The Walking Dead");
-        
-       Temporada laMejorTemporada = bb.getTemporada(4);
+
+        Temporada laMejorTemporada = bb.getTemporada(4);
 
         Episodio epiDemo;
 

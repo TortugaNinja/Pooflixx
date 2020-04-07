@@ -104,37 +104,25 @@ public class Pooflix {
         t4.numero = 4;
 
         // AGrego un websodio
-        Websodio websodio = new Websodio();
+        Websodio websodio = new Websodio(1, "A New Day");
 
-        websodio.numero = 1;
-        websodio.nombre = "A New Day";
+       
         websodio.duracion = 20d;
-
-        websodio.url = "http.//jajaj.com";
-        t4.episodios.add(websodio);
-
-        websodio = new Websodio();
-
-        websodio.numero = 2;
-        websodio.nombre = "Alone";
-        websodio.duracion = 20d;
-        websodio.url = "http.//jajaja.com";
 
         t4.episodios.add(websodio);
 
-        Episodio epii = new Episodio();
+        websodio = new Websodio(2, "Alone");
 
-        epii.numero = 8;
-        epii.nombre = "Too Far Gone";
-        epii.duracion = 43d;
+        
+        websodio.duracion = 20d;
+        
+        t4.episodios.add(websodio);
+
+        Episodio epii = new Episodio(8, "Too Far Gone", 43d);
 
         t4.episodios.add(epii);
 
-        Episodio epiii = new Episodio();
-
-        epiii.numero = 9;
-        epiii.nombre = "After";
-        epiii.duracion = 43d;
+        Episodio epiii = new Episodio(9, "After", 43d);
 
         t4.episodios.add(epiii);
 
@@ -144,18 +132,11 @@ public class Pooflix {
 
         t7.numero = 7;
 
-        Episodio epp = new Episodio();
-
-        epp.numero = 1;
-        epp.nombre = "The Day Will Come When You Won't Be";
-        epp.duracion = 45d;
+        Episodio epp = new Episodio(1, "The Day Will Come When You Won't Be" );
 
         t7.episodios.add(epp);
-        Episodio eppp = new Episodio();
 
-        eppp.numero = 3;
-        eppp.nombre = "The Cell";
-        eppp.duracion = 43d;
+        Episodio eppp = new Episodio(3, "The Cell", 43d);
 
         t7.episodios.add(eppp);
         theWalkingDead.temporadas.add(t7);
