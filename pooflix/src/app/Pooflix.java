@@ -28,20 +28,12 @@ public class Pooflix {
         Temporada t5 = new Temporada();
         t5.numero = 5;
 
-        Episodio ep = new Episodio();
-
-        ep.numero = 7;
-        ep.nombre = "Say my name";
-        ep.duracion = 43d;
+        Episodio ep = new Episodio(7, "Say my name", 43d);
 
         t5.episodios.add(ep);
 
-        Episodio epOtro = new Episodio();
+        Episodio epOtro = new Episodio(5, "Ozymandias", 41d);
 
-        epOtro.numero = 5;
-        epOtro.nombre = "Ozymandias";
-        epOtro.duracion = 41d;
-                 
         t5.episodios.add(epOtro);
 
         breakingB.temporadas.add(t5);
@@ -66,11 +58,7 @@ public class Pooflix {
         t1.numero = 1;
         pennyDreadful.temporadas.add(t1);
 
-        Episodio ep6 = new Episodio();
-
-        ep6.numero = 6;
-        ep6.nombre = "What Death Can Join Together";
-        ep6.duracion = 216000d;
+        Episodio ep6 = new Episodio(6, "What Death Can Join Together", 2166000d);
 
         t1.episodios.add(ep6);
 
@@ -78,11 +66,8 @@ public class Pooflix {
         t3.numero = 3;
         pennyDreadful.temporadas.add(t3);
 
-        Episodio ep8 = new Episodio();
-        ep8.numero = 8;
-        ep8.nombre = "Perpetual Night";
-        ep8.duracion = 158400d;
-
+        Episodio ep8 = new Episodio(8, "Perpetual Night", 158400d );
+        
         t3.episodios.add(ep8);
 
         this.series.add(pennyDreadful);
@@ -107,14 +92,14 @@ public class Pooflix {
         Websodio websodio = new Websodio(1, "A New Day");
 
        
-        websodio.duracion = 20d;
+        websodio.setDuracion(20d);
 
         t4.episodios.add(websodio);
 
         websodio = new Websodio(2, "Alone");
 
         
-        websodio.duracion = 20d;
+        websodio.setDuracion(20d);
         
         t4.episodios.add(websodio);
 
